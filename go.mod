@@ -1,4 +1,4 @@
-module github.com/ntons/tongo/redis
+module github.com/ntons/redis
 
 go 1.16
 
