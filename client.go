@@ -15,6 +15,8 @@ type (
 	XPendingExtArgs = redis.XPendingExtArgs
 	XClaimArgs      = redis.XClaimArgs
 	XAutoClaimArgs  = redis.XAutoClaimArgs
+	XStream         = redis.XStream
+	XMessage        = redis.XMessage
 )
 
 var _ Client = (*redis.Client)(nil)
