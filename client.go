@@ -6,7 +6,16 @@ import (
 
 const Nil = redis.Nil
 
-type Client = redis.Cmdable
+type (
+	Client          = redis.Cmdable
+	Cmdable         = redis.Cmdable
+	XAddArgs        = redis.XAddArgs
+	XReadArgs       = redis.XReadArgs
+	XReadGroupArgs  = redis.XReadGroupArgs
+	XPendingExtArgs = redis.XPendingExtArgs
+	XClaimArgs      = redis.XClaimArgs
+	XAutoClaimArgs  = redis.XAutoClaimArgs
+)
 
 var _ Client = (*redis.Client)(nil)
 var _ Client = (*redis.ClusterClient)(nil)
