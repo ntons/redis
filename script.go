@@ -40,7 +40,7 @@ func (script *Script) Src() string {
 	return script.src
 }
 
-func (script *Script) Run(ctx context.Context, cli ScriptClient, keys []string, args ...interface{}) (r *redis.Cmd) {
+func (script *Script) Run(ctx context.Context, cli ScriptClient, keys []string, args ...interface{}) (r *Cmd) {
 	if r = cli.EvalSha(ctx, script.hash, keys, args...); !isNoScript(r.Err()) {
 		return
 	}

@@ -7,6 +7,7 @@ import (
 const Nil = redis.Nil
 
 type (
+	Cmd             = redis.Cmd
 	Client          = redis.Cmdable
 	Cmdable         = redis.Cmdable
 	XAddArgs        = redis.XAddArgs
