@@ -1,6 +1,8 @@
 package redis
 
 import (
+	"context"
+
 	"github.com/go-redis/redis/v8"
 )
 
@@ -19,6 +21,10 @@ type (
 	XStream         = redis.XStream
 	XMessage        = redis.XMessage
 )
+
+func NewCmd(ctx context.Context, args ...interface{}) *redis.Cmd {
+	return redis.NewCmd(ctx)
+}
 
 var _ Client = (*redis.Client)(nil)
 var _ Client = (*redis.ClusterClient)(nil)
